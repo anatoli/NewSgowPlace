@@ -1,0 +1,52 @@
+<header>
+    <section class="h-noty">
+        <div class="notification" ng-click="removeMessage(i)" ng-repeat="i in messages track by $index">
+            {{i}}
+        </div>
+    </section>
+    <section class="h-user default-color">
+        <input type="text" ng-model="user.name"/>
+        <select ng-model="user.color">
+            <option ng-repeat="i in colors" value="{{i}}">{{i}}</option>
+        </select>
+        <select ng-model="user.avatar">
+            <option ng-repeat="i in avatars" value="{{i}}">{{i}}</option>
+        </select>
+    </section>
+</header>
+
+
+<leaflet id="mymap" lf-center="center" markers="markers"></leaflet>
+
+<!--<ui-gmap-google-map center='map.center' zoom='map.zoom'>-->
+    <!--<div ng-repeat="m in markers">-->
+        <!--<ui-gmap-marker-->
+            <!--idKey='m.id'-->
+            <!--latitude="m.coords.latitude"-->
+            <!--longitude="m.coords.longitude"-->
+            <!--icon="m.icon"-->
+            <!--options="m.options"-->
+            <!--&gt;-->
+        <!--</ui-gmap-marker>-->
+        <!--<ui-gmap-circle-->
+            <!--center='m.coords'-->
+            <!--radius='m.circle.accuracy'-->
+            <!--fill='m.circle.fill'-->
+            <!--stroke='m.circle.stroke'-->
+            <!--&gt;-->
+        <!--</ui-gmap-circle>-->
+        <!--<ui-gmap-circle-->
+            <!--center='m.coords'-->
+            <!--radius='3'-->
+            <!--fill='m.circle.stroke'-->
+            <!--stroke='m.circle.stroke'-->
+            <!--&gt;-->
+        <!--</ui-gmap-circle>-->
+    <!--</div>-->
+<!--</ui-gmap-google-map>-->
+<footer>
+    <h3 class="users-info">Юзеров: <b>{{markers.length}}</b></h3>
+    <ul>
+        <li ng-repeat="i in markers" ng-click="moveToUser(i)"><a><img ng-src="{{i.icon}}"/> <span>{{i.name}}</span></a></li>
+    </ul>
+</footer>

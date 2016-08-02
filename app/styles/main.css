@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.angular-google-map-container {
+    width: 100vw;
+    height: 100vh;
+}
+.marker-labels{
+    font-weight: 500;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 4px white;
+}
+.gmnoprint > img[draggable="false"]{
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 48px!important;
+    height: 48px!important;
+}
+.notification{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
+header{
+    position: fixed;
+    top: 0;
+    background: forestgreen;
+    width: 100%;
+    height: 60px;
+    z-index: 10000;
+    color: #ffffff;
+    overflow: hidden;
+    clear: both;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    width: 20%;
+    background: rgba(0, 0, 0, .5);
+    height: 50px;
+    z-index: 100;
+}
+footer ul{
+    display: inline-block;
+}
+footer ul > li {
+    display: inline-block;
+    line-height: 50px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+}
+footer ul > li:hover{
+     background: black;
+ }
+footer ul > li:last-child{
+     border-right: 0;
+ }
+footer img{
+    left: 0;
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+.users-info{
+    font-weight: normal;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.h-noty{
+    float: left;
+    width: 60%;
+}
+.h-user {
+    float: left;
+    width: 39%;
+    border-left: 1px solid darkgreen;
+}
+#mymap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.text-margin{
+    margin-left: 25%;
+}
+.default-color{
+color: black;
+}
